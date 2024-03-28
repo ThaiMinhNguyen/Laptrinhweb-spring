@@ -4,10 +4,36 @@
  */
 package com.nemo.web.user;
 
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author Nemo
  */
-public class UserService {
-    
+@Service
+public class UserService implements IUserService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public User save(User user) {
+        user = userRepository.save(user);
+        return user;
+    }
+
+    @Override
+    public void delete(long[] ids) {
+        for(long id : ids){
+            userRepository.deleteById(id);
+        }
+    }
+
+    @Override
+    public List<User> getAll() {
+        return (List<User>) userRepository.findAll();
+    }
+
 }

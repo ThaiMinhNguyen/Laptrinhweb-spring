@@ -4,12 +4,15 @@
  */
 package com.nemo.web.user;
 
-import org.springframework.data.jpa.repository.JpaRepository;;
+import java.util.List;
 
 /**
  *
- * @author Nemo
+ * @author Admin
  */
-public interface UserRepository extends JpaRepository<User, Long> {
-    
+
+public interface IUserService {
+    List<User> getAll();
+    User save(User user);
+    void delete(long[] ids);
 }
