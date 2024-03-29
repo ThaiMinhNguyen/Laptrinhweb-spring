@@ -34,4 +34,30 @@ public class UserLogin {
         return modelAndView;
     }
     
+    @PostMapping("/register")
+    public ModelAndView registerUser(@RequestParam("username") String username, @RequestParam("email") String email, @RequestParam("password") String password) {
+        ModelAndView modelAndView = new ModelAndView();
+        User user = new User();
+        user.setEmail(email);
+        user.setUserName(username);
+        user.setPassword(password);
+        user.setRole(1);
+        user = userService.save(user);
+
+        // Chuyển hướng đến trang đăng nhập sau khi đăng ký thành công
+        modelAndView.setViewName("redirect:/login.html");
+        return modelAndView;
+    }
+    
+//    @PostMapping("/register")
+//    public User registerUser(@RequestParam("username") String username, @RequestParam("email") String email, @RequestParam("password") String password) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        User user = new User();
+//        user.setEmail(email);
+//        user.setUserName(username);
+//        user.setPassword(password);
+//        user.setRole(1);
+//        return userService.save(user);
+//    }
+//    
 }
