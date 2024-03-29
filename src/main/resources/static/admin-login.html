@@ -33,14 +33,15 @@
                     </div>
                 <!-- </div> -->
                 <div class="d-flex justify-content-center">
-                        <form>
+                        <form action="/admin-login" method="POST">
+                        <!--<form>-->
                             <div>
                                 <input class="border"
                                     id="username" name="username" placeholder="Tên đăng nhập hoặc email"
                                     autocomplete="email" type="text" value="">
                             </div>
                             <div>                
-                                <input class="border" placeholder="Mật khẩu" type="password">
+                                <input class="border" placeholder="Mật khẩu" type="password" name = "password">
                             </div>
                             <div>
                                 <div>
@@ -56,17 +57,19 @@
                                 </a>
                             </div>
                             <!-- <div class="row pt-4"> -->
-                                <button class="text-white text-sm bg-danger rounded mt-4 w-100" type="submit" formaction="./pages/admin-dashboard/admin-dashboard.html">
+                            <!--formaction="./pages/admin-dashboard/admin-dashboard.html"-->
+                                <button class="text-white text-sm bg-danger rounded mt-4 w-100" type="submit" >
                                     Đăng nhập
                                 </button>
                             <!-- </div> -->
                             <hr class="solid">
                             <div class="mb-2">
-                                <button class="text-white text-sm bg-primary rounded p-1" formaction="index.html" type="submit">
+                                <button class="text-white text-sm bg-primary rounded p-1" formaction="/index">
                                     Đăng nhập với tài khoản học sinh
                                 </button>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>

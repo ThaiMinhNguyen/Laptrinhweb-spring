@@ -15,4 +15,5 @@ public interface IUserService {
     List<User> getAll();
     User save(User user);
     void delete(long[] ids);
+    User findByUserNameAndPasswordAndRole(String username, String password, Integer role);
 }

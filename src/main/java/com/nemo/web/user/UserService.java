@@ -36,4 +36,9 @@ public class UserService implements IUserService {
         return (List<User>) userRepository.findAll();
     }
 
+    @Override
+    public User findByUserNameAndPasswordAndRole(String username, String password, Integer role) {
+       return userRepository.findByUserNameAndPasswordAndRole(username, password, role);   
+    }
+    
 }
