@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -54,7 +54,7 @@
                     <div class="card-header">Bảng thống kê</div>
                     <div class="card-body">
                         <table class="table table-striped" id="thongke-hocsinh">
-                            <thead>
+<!--                            <thead>
                                 <tr>
                                     <th>STT</th>
                                     <th>Họ và tên</th>
@@ -84,6 +84,24 @@
                                     <td>Kỳ thi 2</td>
                                     <td>2024-02-15</td>
                                     <td>8</td>
+                                </tr>
+                            </tbody>-->
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Họ và tên</th>
+                                    <th>Kỳ thi</th>
+                                    <th>Ngày thi</th>
+                                    <th>Điểm</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <tr th:each="student, iterStat : ${students}">
+                                    <td th:text="${iterStat.index + 1}"></td>
+                                    <td th:text="${student.name}"></td>
+                                    <td th:text="${student.kythi}"></td>
+                                    <td th:text="${student.ngaythi}"></td>
+                                    <td th:text="${student.diem}"></td>
                                 </tr>
                             </tbody>
                         </table>

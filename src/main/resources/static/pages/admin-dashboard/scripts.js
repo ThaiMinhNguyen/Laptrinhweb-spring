@@ -1,7 +1,7 @@
 const exams = [
     { name: "Quản lý danh sách các kỳ thi", status: "open", link: "../admin-taokythi/admin-taokythi.html"},
     { name: "Quản lý danh sách người dùng", status: "open" , link: "./page2.html"},
-    { name: "Xem thống kê", status: "restricted", link: "../admin-thongke/admin-thongke.html"},
+    { name: "Xem thống kê", status: "restricted", link: "/admin-thongke"},
     { name: "Xem kết quả sinh viên", status: "restricted", link: "../admin-xemketquasinhvien/admin-xemketquasinhvien.html"},
 ];
 
