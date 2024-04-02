@@ -9,7 +9,7 @@ function search() {
       exams: [
         {
           examName: "Mạng máy tính",
-          score: 10,
+          score: 80,
           status: "Hoàn thành",
           time: "10:00 AM - 11:30 AM",
           answers: ["A", "C", "C", "D", "B", "A", "D"],
