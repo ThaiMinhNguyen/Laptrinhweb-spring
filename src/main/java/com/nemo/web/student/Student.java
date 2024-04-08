@@ -27,7 +27,7 @@ public class Student{
     @Column(length = 45, nullable = false, name = "username")
     private String name;
     
-    @Column(nullable = false, unique = true, length = 45)
+    @Column(nullable = false, length = 45)
     private String kythi;
 
     @Column

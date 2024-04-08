@@ -41,18 +41,18 @@ public class StudentController {
         return studentService.getAll();
     }
 
-    @PostMapping("/students/save")  // Changed URL path
+    @PostMapping("/students/save")  
     public Student createStudent(@RequestBody Student model) {
         return studentService.save(model);
     }
 
-    @PutMapping(value = "/students/{id}")  // Changed URL path
+    @PutMapping(value = "/students/{id}")  
     public Student updateStudent(@RequestBody Student model, @PathVariable("id") Integer id) {
         model.setId(id);
         return studentService.save(model);
     }
 
-    @DeleteMapping(value = "/students/delete")  // Changed URL path
+    @DeleteMapping(value = "/students/delete")
     public void deleteStudent(@RequestBody long[] ids) {
         studentService.delete(ids);
     }
