@@ -5,7 +5,7 @@ import java.util.List;
 //UserDataRepository.java
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import entity.UserData;
+import com.nemo.web.UserData;
 
 public interface UserDataRepository extends JpaRepository<UserData, Long> {
 
